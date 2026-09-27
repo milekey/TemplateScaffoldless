@@ -27,10 +27,14 @@ class MainActivity : ComponentActivity() {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(WindowInsets.safeDrawing.asPaddingValues())
                         .background(MaterialTheme.colorScheme.background)
                 ) {
-                    Greeting(name = "Android")
+                    Box(
+                        modifier = Modifier
+                            .padding(WindowInsets.safeDrawing.asPaddingValues())
+                    ) {
+                        Greeting(name = "Android")
+                    }
                 }
             }
         }
