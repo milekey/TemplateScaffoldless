@@ -32,6 +32,8 @@ class MainActivity : ComponentActivity() {
                     Box(
                         modifier = Modifier
                             .padding(WindowInsets.safeDrawing.asPaddingValues())
+                            .fillMaxSize(),
+                        //contentAlignment = Alignment.BottomStart
                     ) {
                         Greeting(name = "Android")
                     }
