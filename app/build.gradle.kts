@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.scaredeer.templatescaffoldless"
-        minSdk = 23
+        minSdk = 24
         targetSdk = 37
         versionCode = 1
         versionName = "20261005"
