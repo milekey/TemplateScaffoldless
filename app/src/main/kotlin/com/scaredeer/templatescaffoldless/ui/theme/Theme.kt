@@ -54,6 +54,7 @@ fun AppTheme(
         else -> LightColorScheme
     }
 
+    // cf. https://developer.android.com/codelabs/basic-android-kotlin-compose-practice-superheroes?hl=ja#2
     @Suppress("Deprecation")
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.VANILLA_ICE_CREAM) {
         val view = LocalView.current
@@ -64,6 +65,8 @@ fun AppTheme(
                 WindowCompat
                     .getInsetsController(window, view)
                     .isAppearanceLightStatusBars = darkTheme
+                    // darkTheme にすべきか、!darkTheme にすべきか、それとも常に true/false 一方にすべきかは、
+                    // window.statusBarColor に指定する色に依る
             }
         }
     }
