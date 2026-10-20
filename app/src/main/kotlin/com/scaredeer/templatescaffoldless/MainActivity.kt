@@ -22,10 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    Box(modifier = Modifier.safeDrawingPadding()) {
-                        Greeting(name = "Android")
-                        Greeting(name = "Android", modifier = Modifier.align(Alignment.BottomEnd))
-                    }
+                    MainScreen(modifier = Modifier.safeDrawingPadding())
                 }
             }
         }
@@ -33,17 +30,17 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun MainScreen(modifier: Modifier = Modifier) {
+    Box(modifier = modifier.fillMaxSize()) {
+        Text(text = "↖", modifier = modifier.align(Alignment.TopStart))
+        Text(text = "↘", modifier = modifier.align(Alignment.BottomEnd))
+    }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun MainScreenPreview() {
     AppTheme {
-        Greeting("Android")
+        MainScreen()
     }
 }
